@@ -16,6 +16,42 @@ var detachAllTabs = function() {
   });
 };
 
-chrome.runtime.onInstalled.addListener(detachAllTabs);
-chrome.runtime.onStartup.addListener(detachAllTabs);
-chrome.tabs.onCreated.addListener(detachTab);
+var startTabless = function() {
+  chrome.storage.local.set({tabless: true});
+  chrome.tabs.onCreated.addListener(detachTab);
+  detachAllTabs();
+  chrome.browserAction.setBadgeText({text: 'WIN'});
+  chrome.browserAction.setBadgeBackgroundColor({color: '#808080'});
+};
+
+var stopTabless = function() {
+  chrome.storage.local.set({tabless: false});
+  chrome.tabs.onCreated.removeListener(detachTab);
+  chrome.browserAction.setBadgeText({text: 'TAB'});
+  chrome.browserAction.setBadgeBackgroundColor({color: '#ffffff'});
+};
+
+var toggleTabless = function() {
+  chrome.storage.local.get(['tabless'], function(result) {
+    if(result.tabless) {
+      stopTabless();
+    } else {
+      startTabless();
+    }
+  });
+};
+
+chrome.browserAction.onClicked.addListener(toggleTabless);
+
+chrome.runtime.onInstalled.addListener(startTabless);
+
+chrome.runtime.onStartup.addListener(function() {
+  chrome.storage.local.get(['tabless'], function(result) {
+    if(result.tabless) {
+      startTabless();
+    }
+  });
+});
+
+//chrome.runtime.onStartup.addListener(detachAllTabs);
+//chrome.tabs.onCreated.addListener(detachTab);

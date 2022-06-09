@@ -10,11 +10,8 @@
   "default_locale": "en",
   "background": {
     "scripts": [
-      "scripts/close_windows_browser_action.js",
-      "scripts/detach_new_tabs.js",
-      "scripts/window_count_badge.js"
-    ],
-    "persistent": false
+      "scripts/detach_new_tabs.js"
+    ]
   },
   "browser_action": {
     "default_icon": {
@@ -25,5 +22,8 @@
       "64": "images/icon-64.png"
     },
     "default_title": "__MSG_browserActionTitle__"
-  }
+  },
+  "permissions": [
+	"storage"
+  ]
 }
