@@ -1,8 +1,8 @@
 {
-  "name": "__MSG_appName__",
+  "name": "Tab-less Togglable",
   "version": "0.6.0",
   "manifest_version": 2,
-  "description": "__MSG_appDescription__",
+  "description": "Enables user to turn tabs on or off for tab-less browsing when needed",
   "icons": {
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
@@ -21,7 +21,7 @@
       "38": "images/icon-38.png",
       "64": "images/icon-64.png"
     },
-    "default_title": "__MSG_browserActionTitle__"
+    "default_title": "Toggle between windowed and tabbed mode"
   },
   "permissions": [
 	"storage"
