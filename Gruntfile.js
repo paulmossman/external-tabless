@@ -238,39 +238,74 @@ module.exports = function (grunt) {
     },
 
     'imagemagick-convert': {
-      icon16: icon({
-        input: '<%= config.app %>/images/icon.svg',
-        output: '<%= config.dist %>/images/icon-16.png',
+      tabless16: icon({
+        input: '<%= config.app %>/images/tabless.svg',
+        output: '<%= config.dist %>/images/tabless-16.png',
         size: '16x16',
       }),
-      icon19: icon({
-        input: '<%= config.app %>/images/icon.svg',
-        output: '<%= config.dist %>/images/icon-19.png',
+      tabless19: icon({
+        input: '<%= config.app %>/images/tabless.svg',
+        output: '<%= config.dist %>/images/tabless-19.png',
         size: '19x19',
       }),
-      icon32: icon({
-        input: '<%= config.app %>/images/icon.svg',
-        output: '<%= config.dist %>/images/icon-32.png',
+      tabless32: icon({
+        input: '<%= config.app %>/images/tabless.svg',
+        output: '<%= config.dist %>/images/tabless-32.png',
         size: '32x32',
       }),
-      icon38: icon({
-        input: '<%= config.app %>/images/icon.svg',
-        output: '<%= config.dist %>/images/icon-38.png',
+      tabless38: icon({
+        input: '<%= config.app %>/images/tabless.svg',
+        output: '<%= config.dist %>/images/tabless-38.png',
         size: '38x38',
       }),
-      icon48: icon({
-        input: '<%= config.app %>/images/icon.svg',
-        output: '<%= config.dist %>/images/icon-48.png',
+      tabless48: icon({
+        input: '<%= config.app %>/images/tabless.svg',
+        output: '<%= config.dist %>/images/tabless-48.png',
         size: '48x48',
       }),
-      icon64: icon({
-        input: '<%= config.app %>/images/icon.svg',
-        output: '<%= config.dist %>/images/icon-64.png',
+      tabless64: icon({
+        input: '<%= config.app %>/images/tabless.svg',
+        output: '<%= config.dist %>/images/tabless-64.png',
         size: '64x64',
       }),
-      icon128: icon({
-        input: '<%= config.app %>/images/icon.svg',
-        output: '<%= config.dist %>/images/icon-128.png',
+      tabless128: icon({
+        input: '<%= config.app %>/images/tabless.svg',
+        output: '<%= config.dist %>/images/tabless-128.png',
+        size: '128x128',
+      }),
+      tabbed16: icon({
+        input: '<%= config.app %>/images/tabbed.svg',
+        output: '<%= config.dist %>/images/tabbed-16.png',
+        size: '16x16',
+      }),
+      tabbed19: icon({
+        input: '<%= config.app %>/images/tabbed.svg',
+        output: '<%= config.dist %>/images/tabbed-19.png',
+        size: '19x19',
+      }),
+      tabbed32: icon({
+        input: '<%= config.app %>/images/tabbed.svg',
+        output: '<%= config.dist %>/images/tabbed-32.png',
+        size: '32x32',
+      }),
+      tabbed38: icon({
+        input: '<%= config.app %>/images/tabbed.svg',
+        output: '<%= config.dist %>/images/tabbed-38.png',
+        size: '38x38',
+      }),
+      tabbed48: icon({
+        input: '<%= config.app %>/images/tabbed.svg',
+        output: '<%= config.dist %>/images/tabbed-48.png',
+        size: '48x48',
+      }),
+      tabbed64: icon({
+        input: '<%= config.app %>/images/tabbed.svg',
+        output: '<%= config.dist %>/images/tabbed-64.png',
+        size: '64x64',
+      }),
+      tabbed128: icon({
+        input: '<%= config.app %>/images/tabbed.svg',
+        output: '<%= config.dist %>/images/tabbed-128.png',
         size: '128x128',
       }),
       tempPromoTileSmall: tempPromo({
@@ -383,13 +418,20 @@ module.exports = function (grunt) {
       test: [
       ],
       icons: [
-        'imagemagick-convert:icon16',
-        'imagemagick-convert:icon19',
-        'imagemagick-convert:icon32',
-        'imagemagick-convert:icon38',
-        'imagemagick-convert:icon48',
-        'imagemagick-convert:icon64',
-        'imagemagick-convert:icon128'
+        'imagemagick-convert:tabless16',
+        'imagemagick-convert:tabless19',
+        'imagemagick-convert:tabless32',
+        'imagemagick-convert:tabless38',
+        'imagemagick-convert:tabless48',
+        'imagemagick-convert:tabless64',
+        'imagemagick-convert:tabless128',
+        'imagemagick-convert:tabbed16',
+        'imagemagick-convert:tabbed19',
+        'imagemagick-convert:tabbed32',
+        'imagemagick-convert:tabbed38',
+        'imagemagick-convert:tabbed48',
+        'imagemagick-convert:tabbed64',
+        'imagemagick-convert:tabbed128'
       ],
       promoTemp: [
         'imagemagick-convert:tempPromoTileSmall',

@@ -20,15 +20,29 @@ var startTabless = function() {
   chrome.storage.local.set({tabless: true});
   chrome.tabs.onCreated.addListener(detachTab);
   detachAllTabs();
-  chrome.browserAction.setBadgeText({text: 'WIN'});
-  chrome.browserAction.setBadgeBackgroundColor({color: '#808080'});
+  chrome.browserAction.setIcon({
+    path: {
+      16: 'images/tabless-16.png',
+      19: 'images/tabless-19.png',
+      32: 'images/tabless-32.png',
+      38: 'images/tabless-38.png',
+      64: 'images/tabless-64.png',
+    }
+  });
 };
 
 var stopTabless = function() {
   chrome.storage.local.set({tabless: false});
   chrome.tabs.onCreated.removeListener(detachTab);
-  chrome.browserAction.setBadgeText({text: 'TAB'});
-  chrome.browserAction.setBadgeBackgroundColor({color: '#ffffff'});
+  chrome.browserAction.setIcon({
+    path: {
+      16: 'images/tabbed-16.png',
+      19: 'images/tabbed-19.png',
+      32: 'images/tabbed-32.png',
+      38: 'images/tabbed-38.png',
+      64: 'images/tabbed-64.png',
+    }
+  });
 };
 
 var toggleTabless = function() {
@@ -49,9 +63,8 @@ chrome.runtime.onStartup.addListener(function() {
   chrome.storage.local.get(['tabless'], function(result) {
     if(result.tabless) {
       startTabless();
+    } else {
+      stopTabless();
     }
   });
 });
-
-//chrome.runtime.onStartup.addListener(detachAllTabs);
-//chrome.tabs.onCreated.addListener(detachTab);

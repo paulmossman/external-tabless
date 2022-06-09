@@ -10,8 +10,10 @@ original, this version allows you to toggle between windowed and tabbed mode by
 clicking the icon or by using a keyboard shortcut. It lacks some features of
 the original:
 
-* Clicking the icon does not close all unfocused windows. Rather, it toggles between windowed and tabbed mode.
-* The icon badge does not display the number of open windows. Rather, it indicates the current setting: [WIN]dowed or [TAB]bed.
+* Clicking the icon does not close all unfocused windows. Rather, it toggles
+between windowed and tabbed mode.
+* The icon badge does not display the number of open windows. This makes it
+easier to see the icon, which changes to indicate the current mode.
 
 Installation
 -----

@@ -4,8 +4,8 @@
   "manifest_version": 2,
   "description": "Enables user to turn tabs on or off for tab-less browsing when needed",
   "icons": {
-    "48": "images/icon-48.png",
-    "128": "images/icon-128.png"
+    "48": "images/tabless-48.png",
+    "128": "images/tabless-128.png"
   },
   "default_locale": "en",
   "background": {
@@ -15,11 +15,11 @@
   },
   "browser_action": {
     "default_icon": {
-      "16": "images/icon-16.png",
-      "19": "images/icon-19.png",
-      "32": "images/icon-32.png",
-      "38": "images/icon-38.png",
-      "64": "images/icon-64.png"
+      "16": "images/tabless-16.png",
+      "19": "images/tabless-19.png",
+      "32": "images/tabless-32.png",
+      "38": "images/tabless-38.png",
+      "64": "images/tabless-64.png"
     },
     "default_title": "Toggle between windowed and tabbed mode"
   },
