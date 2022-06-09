@@ -57,7 +57,7 @@ var toggleTabless = function() {
 
 chrome.browserAction.onClicked.addListener(toggleTabless);
 
-chrome.runtime.onInstalled.addListener(startTabless);
+chrome.runtime.onInstalled.addListener(stopTabless);
 
 chrome.runtime.onStartup.addListener(function() {
   chrome.storage.local.get(['tabless'], function(result) {
