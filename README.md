@@ -59,6 +59,25 @@ switches between tabbed and windowed mode.
 In Chrome, go to `chrome://extensions/shortcuts` and scroll to Tab-less
 Togglable. Click the pencil icon and type your desired shortcut.
 
+Usage
+-----
+
+Upon being installed, the extension begins in tabbed mode. This mode does
+absolutely nothing, allowing tabs to be created without being converted into
+windows.
+
+To switch to tab-less mode, click the icon, or use a keyboard shortcut if you
+set one. This immediately converts all open tabs into separate windows. In
+tabbed mode, for every instance a new tab would be created, an appropriate new
+window is created instead.
+
+To switch back to tabbed mode, click the icon (or shortcut) again.
+
+Note: switching back to tabbed mode does *not* collapse the individual windows
+back into tabs. If you have many tabs open and switch to tab-less mode, all the
+tabs will be separated into individual windows; there is no way to undo this
+without manually recombining the windows one by one.
+
 FAQs
 ----
 
