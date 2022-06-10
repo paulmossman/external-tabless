@@ -3,12 +3,12 @@
     "message": "タブトグ"
   },
   "appDesc": {
-    "message": "タブがいらない時、無効にできます"
+    "message": "タブがいらない時は、オフにすることができます"
   },
   "actionName": {
-    "message": "モードをスイッチ"
+    "message": "モードスイッチ"
   },
   "commandDesc": {
-    "message": "モードをスイッチ"
+    "message": "モードスイッチ"
   }
 }
