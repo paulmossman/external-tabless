@@ -402,6 +402,7 @@ module.exports = function (grunt) {
             'styles/{,*/}*.css',
             'styles/fonts/{,*/}*.*',
             '_locales/{,*/}*.json',
+            'scripts/background.js',
           ]
         }]
       }
@@ -453,9 +454,6 @@ module.exports = function (grunt) {
           indentSize: 2,
           background: {
             target: 'scripts/background.js',
-            exclude: [
-              'scripts/chromereload.js'
-            ]
           }
         },
         src: '<%= config.app %>',
@@ -510,7 +508,7 @@ module.exports = function (grunt) {
     'imagemin',
     //  'concurrent:dist',
     //  'cssmin',
-    'concat',
+    //  'concat',
     'uglify',
     'copy',
     'usemin',

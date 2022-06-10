@@ -1,7 +1,7 @@
 {
   "name": "Tab-less Togglable",
   "version": "0.6.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "description": "Enables user to turn tabs on or off for tab-less browsing when needed",
   "icons": {
     "48": "images/tabless-48.png",
@@ -9,11 +9,9 @@
   },
   "default_locale": "en",
   "background": {
-    "scripts": [
-      "scripts/detach_new_tabs.js"
-    ]
+    "service_worker": "scripts/background.js"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "16": "images/tabless-16.png",
       "19": "images/tabless-19.png",
