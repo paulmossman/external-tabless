@@ -1,6 +1,6 @@
 {
   "name": "Tab-less Togglable",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "manifest_version": 3,
   "description": "Enables user to turn tabs on or off for tab-less browsing when needed",
   "icons": {
