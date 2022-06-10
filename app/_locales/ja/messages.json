@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "タブトグ"
+  },
+  "appDesc": {
+    "message": "タブがいらない時、無効にできます"
+  },
+  "actionName": {
+    "message": "モードをスイッチ"
+  },
+  "commandDesc": {
+    "message": "モードをスイッチ"
+  }
+}
