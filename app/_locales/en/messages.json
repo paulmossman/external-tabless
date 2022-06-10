@@ -1,11 +1,14 @@
 {
   "appName": {
-    "message": "Tab-less"
+    "message": "Tab-less Togglable"
   },
-  "appDescription": {
-    "message": "Disables tabs for tab-less browsing"
+  "appDesc": {
+    "message": "Enables user to turn tabs on or off for tab-less browsing when needed"
   },
-  "browserActionTitle": {
-    "message": "Close other windows"
+  "actionName": {
+    "message": "Click to toggle tabs"
+  },
+  "commandDesc": {
+    "message": "Toggle between tabbed and tab-less mode"
   }
 }

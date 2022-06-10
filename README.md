@@ -114,6 +114,19 @@ JavaScript developer than I.
 optimized and comes with unit testing, whereas this fork has room for
 improvement.
 
+Bugs and limitations
+--------------------
+
+The parent extension, Tab-less, was built for the old Manifest V2 standard, but
+between the release of Tab-less and Tab-less Togglable, the Chrome store has
+stopped accepting extensions that use Manifest V2.
+
+With the new Manifest V3, there is a known bug with Chrome that prevents the
+service worker code from running for more than 30 seconds of time where the user
+is inactive. Working around this bug required a bit of a messy hack, and it
+sacrifices the ability of the extension to continue running when there are no
+website tabs open --- e.g. only `chrome://` tabs, only `file://` tabs, etc.
+
 Contributing
 ------------
 

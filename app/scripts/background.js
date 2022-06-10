@@ -1,5 +1,7 @@
 'use strict';
 
+// Extension functionality
+
 var detachTab = function(tab) {
   if (tab.index === 0 || tab.pinned) {
     return;
@@ -68,3 +70,48 @@ chrome.runtime.onStartup.addListener(function() {
     }
   });
 });
+
+// Keep alive
+// Created by wOxxOm
+// Taken from https://stackoverflow.com/questions/66618136
+
+let lifeline;
+
+keepAlive();
+
+chrome.runtime.onConnect.addListener(port => {
+  if (port.name === 'keepAlive') {
+    lifeline = port;
+    setTimeout(keepAliveForced, 295e3); // 5 minutes minus 5 seconds
+    port.onDisconnect.addListener(keepAliveForced);
+  }
+});
+
+function keepAliveForced() {
+  if(lifeline !== null && lifeline !== undefined) lifeline.disconnect();
+  lifeline = null;
+  keepAlive();
+}
+
+async function keepAlive() {
+  if (lifeline) return;
+  for (const tab of await chrome.tabs.query({ url: '*://*/*' })) {
+    try {
+      await chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        func: () => chrome.runtime.connect({ name: 'keepAlive' }),
+      });
+      chrome.tabs.onUpdated.removeListener(retryOnTabUpdate);
+      return;
+    } catch (e) {
+      // Do nothing
+    }
+  }
+  chrome.tabs.onUpdated.addListener(retryOnTabUpdate);
+}
+
+async function retryOnTabUpdate(tabId, info) {
+  if (info.url && /^(file|https?):/.test(info.url)) {
+    keepAlive();
+  }
+}
