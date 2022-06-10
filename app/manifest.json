@@ -1,6 +1,6 @@
 {
   "name": "Tab-less Togglable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 3,
   "description": "Enables user to turn tabs on or off for tab-less browsing when needed",
   "icons": {
@@ -21,7 +21,14 @@
     },
     "default_title": "Toggle between windowed and tabbed mode"
   },
+  "commands": {
+    "_execute_action": {
+        "suggested_key": "Alt+O",
+        "description": "Toggle between windowed and tabbed mode",
+		"global": "true"
+      }
+  },
   "permissions": [
-	"storage"
+    "storage"
   ]
 }
