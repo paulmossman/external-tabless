@@ -127,6 +127,9 @@ is inactive. Working around this bug required a bit of a messy hack, and it
 sacrifices the ability of the extension to continue running when there are no
 website tabs open --- e.g. only `chrome://` tabs, only `file://` tabs, etc.
 
+If you notice that the extension isn't converting tabs to separate windows like
+it's supposed to, click the icon twice (or use the shortcut twice).
+
 Contributing
 ------------
 
