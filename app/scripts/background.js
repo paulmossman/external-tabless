@@ -71,6 +71,14 @@ chrome.runtime.onStartup.addListener(function() {
   });
 });
 
+chrome.storage.local.get(['tabless'], function(result) {
+  if(result.tabless) {
+    startTabless();
+  } else {
+    stopTabless();
+  }
+});
+
 // Keep alive
 // Created by wOxxOm
 // Taken from https://stackoverflow.com/questions/66618136
