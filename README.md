@@ -20,7 +20,7 @@ Installation
 
 ### Chrome Web Store
 
-This extension will be released on the Chrome Web Store soon.
+[This extension can be downloaded via the Chrome Web Store.](https://chrome.google.com/webstore/detail/tab-less-togglable/ofolfkcaiejibcgljnccbaaledlbmdhd?hl=en&authuser=0)
 
 ### Building from source
 
