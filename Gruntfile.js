@@ -169,17 +169,6 @@ module.exports = function (grunt) {
       }
     },
 
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/images',
-          src: '{,*/}*.svg',
-          dest: '<%= config.dist %>/images'
-        }]
-      }
-    },
-
     mkdir: {
       images: {
         options: {
@@ -334,8 +323,7 @@ module.exports = function (grunt) {
       chrome: [
       ],
       dist: [
-        'imagemin',
-        'svgmin'
+        'imagemin'
       ],
       test: [
       ],
