@@ -1,11 +1,11 @@
 {
-  "name": "tab-less-togglable",
-  "description": "Disables tabs for tab-less browsing",
-  "version": "1.1.2",
+  "name": "external-tabless",
+  "description": "Chrome Extension: URLs opened from outside Chrome launch in a new window",
+  "version": "1.0.0",
   "license": "LGPL-3.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ei14/tab-less-togglable.git"
+    "url": "https://github.com/paulmossman/external-tabless.git"
   },
   "dependencies": {},
   "devDependencies": {
