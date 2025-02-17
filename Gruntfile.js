@@ -323,7 +323,7 @@ module.exports = function (grunt) {
         options: {
           archive: function() {
             var manifest = grunt.file.readJSON('app/manifest.json');
-            return 'package/Tab-less-' + manifest.version + '.zip';
+            return 'package/External-Tabless-' + manifest.version + '.zip';
           }
         },
         files: [{
