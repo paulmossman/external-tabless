@@ -1,14 +1,14 @@
 {
   "appName": {
-    "message": "Tab-less Togglable"
+    "message": "External Tab-less"
   },
   "appDesc": {
-    "message": "Enables user to turn tabs on or off for tab-less browsing when needed"
+    "message": "URLs opened from outside Chrome launch in a new window."
   },
   "actionName": {
-    "message": "Click to toggle tabs"
+    "message": ""
   },
   "commandDesc": {
-    "message": "Toggle between tabbed and tab-less mode"
+    "message": ""
   }
 }
