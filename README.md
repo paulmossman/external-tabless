@@ -3,8 +3,7 @@
 This extension forces all URLs opened from outside Chrome to launch in a new
 window.
 
-This repository is a fork of
-[ei14/tab-less-togglable](https://github.com/ei14/tab-less-togglable).
+It's a fork of [ei14/tab-less-togglable](https://github.com/ei14/tab-less-togglable).
 
 ## Installation
 
@@ -54,9 +53,9 @@ Examples of opening a URL from outside Chrome:
 - From command line:
     - Mac: `open https://github.com`
     - Windows: `start https://github.com`
-- An application (such as [Bitwarden desktop](https://bitwarden.com/download/#downloads-desktop)
-  launching an SSO login.
-- MS Azure CLI's [`az login`](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli-interactively).
+- An application launching a web login, such as:
+    - [Bitwarden desktop](https://bitwarden.com/download/#downloads-desktop)
+    - MS Azure CLI's [`az login`](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli-interactively).
 
 When you aren't using Chrome but open a URL that takes you to Chrome, it's
 unlikely that URL is related to any of tabs you already have open in other
