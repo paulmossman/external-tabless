@@ -29,9 +29,6 @@
       "global": "true"
     }
   },
-  "permissions": [
-	  "activeTab"
-  ],
   "host_permissions": [
     "*://*/*"
   ]
