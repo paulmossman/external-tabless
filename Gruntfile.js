@@ -26,42 +26,6 @@ function icon(args) {
   };
 }
 
-function tempPromo(args) {
-  return {
-    args: [
-      '-density',
-      '2000',
-      '-background',
-      'white',
-      '-resize',
-      args.size,
-      '-verbose',
-      args.input,
-      args.output,
-    ],
-    fatals: true
-  };
-}
-
-function finalPromo(args) {
-  return {
-    args: [
-      '-background',
-      'white',
-      '-resize',
-      args.size,
-      '-gravity',
-      'center',
-      '-extent',
-      args.size,
-      '-verbose',
-      args.input,
-      args.output
-    ],
-    fatals: true
-  };
-}
-
 module.exports = function (grunt) {
 
   // Load grunt tasks automatically
@@ -74,7 +38,6 @@ module.exports = function (grunt) {
   var config = {
     app: 'app',
     dist: 'dist',
-    promo: 'promo',
     test: 'test',
   };
 
@@ -146,13 +109,6 @@ module.exports = function (grunt) {
           src: [
             '<%= config.dist %>/*',
             '!<%= config.dist %>/.git*'
-          ]
-        }]
-      },
-      promo: {
-        files: [{
-          src: [
-            '<%= config.promo %>/temp/*'
           ]
         }]
       }
@@ -229,11 +185,6 @@ module.exports = function (grunt) {
         options: {
           create: ['<%= config.dist %>/images']
         }
-      },
-      promo: {
-        options: {
-          create: ['<%= config.promo %>/chrome', '<%= config.promo %>/firefox', '<%= config.promo %>/temp']
-        }
       }
     },
 
@@ -307,36 +258,6 @@ module.exports = function (grunt) {
         input: '<%= config.app %>/images/tabbed.svg',
         output: '<%= config.dist %>/images/tabbed-128.png',
         size: '128x128',
-      }),
-      tempPromoTileSmall: tempPromo({
-        input: '<%= config.app %>/images/promo_tile.svg',
-        output: '<%= config.promo %>/temp/promo_tile_small.png',
-        size: '440x280',
-      }),
-      promoTileSmall: finalPromo({
-        input: '<%= config.promo %>/temp/promo_tile_small.png',
-        output: '<%= config.promo %>/chrome/promo_tile_small.png',
-        size: '440x280',
-      }),
-      tempPromoTileLarge: tempPromo({
-        input: '<%= config.app %>/images/promo_tile.svg',
-        output: '<%= config.promo %>/temp/promo_tile_large.png',
-        size: '920x680',
-      }),
-      promoTileLarge: finalPromo({
-        input: '<%= config.promo %>/temp/promo_tile_large.png',
-        output: '<%= config.promo %>/chrome/promo_tile_large.png',
-        size: '920x680',
-      }),
-      tempPromoTileMarquee: tempPromo({
-        input: '<%= config.app %>/images/promo_tile.svg',
-        output: '<%= config.promo %>/temp/promo_tile_marquee.png',
-        size: '1400x560',
-      }),
-      promoTileMarquee: finalPromo({
-        input: '<%= config.promo %>/temp/promo_tile_marquee.png',
-        output: '<%= config.promo %>/chrome/promo_tile_marquee.png',
-        size: '1400x560',
       })
     },
 
@@ -433,16 +354,6 @@ module.exports = function (grunt) {
         'imagemagick-convert:tabbed48',
         'imagemagick-convert:tabbed64',
         'imagemagick-convert:tabbed128'
-      ],
-      promoTemp: [
-        'imagemagick-convert:tempPromoTileSmall',
-        'imagemagick-convert:tempPromoTileLarge',
-        'imagemagick-convert:tempPromoTileMarquee',
-      ],
-      promo: [
-        'imagemagick-convert:promoTileSmall',
-        'imagemagick-convert:promoTileLarge',
-        'imagemagick-convert:promoTileMarquee',
       ]
     },
 
@@ -513,13 +424,6 @@ module.exports = function (grunt) {
     'copy',
     'usemin',
     'compress'
-  ]);
-
-  grunt.registerTask('promo', [
-    'clean:promo',
-    'mkdir:promo',
-    'concurrent:promoTemp',
-    'concurrent:promo',
   ]);
 
   grunt.registerTask('default', [
