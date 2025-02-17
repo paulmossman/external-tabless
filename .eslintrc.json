@@ -5,7 +5,8 @@
   },
   "env": {
     "browser": true,
-    "webextensions": true
+    "webextensions": true,
+    "es6": true
   },
   "rules": {
     "indent": ["error", 2],
