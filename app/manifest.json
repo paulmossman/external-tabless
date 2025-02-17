@@ -30,8 +30,7 @@
     }
   },
   "permissions": [
-    "storage",
-	"scripting"
+	  "activeTab"
   ],
   "host_permissions": [
     "*://*/*"
