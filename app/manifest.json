@@ -4,8 +4,8 @@
   "manifest_version": 3,
   "description": "__MSG_appDesc__",
   "icons": {
-    "48": "images/tabless-48.png",
-    "128": "images/tabless-128.png"
+    "48": "images/external-tabless-48.png",
+    "128": "images/external-tabless-128.png"
   },
   "default_locale": "en",
   "background": {
@@ -14,11 +14,11 @@
   },
   "action": {
     "default_icon": {
-      "16": "images/tabless-16.png",
-      "19": "images/tabless-19.png",
-      "32": "images/tabless-32.png",
-      "38": "images/tabless-38.png",
-      "64": "images/tabless-64.png"
+      "16": "images/external-tabless-16.png",
+      "19": "images/external-tabless-19.png",
+      "32": "images/external-tabless-32.png",
+      "38": "images/external-tabless-38.png",
+      "64": "images/external-tabless-64.png"
     },
     "default_title": "__MSG_actionName__"
   },

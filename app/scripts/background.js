@@ -24,11 +24,11 @@ var startTabless = function() {
   detachAllTabs();
   chrome.action.setIcon({
     path: {
-      16: '../images/tabless-16.png',
-      19: '../images/tabless-19.png',
-      32: '../images/tabless-32.png',
-      38: '../images/tabless-38.png',
-      64: '../images/tabless-64.png',
+      16: '../images/external-tabless-16.png',
+      19: '../images/external-tabless-19.png',
+      32: '../images/external-tabless-32.png',
+      38: '../images/external-tabless-38.png',
+      64: '../images/external-tabless-64.png',
     }
   });
 };
@@ -38,11 +38,11 @@ var stopTabless = function() {
   chrome.tabs.onCreated.removeListener(detachTab);
   chrome.action.setIcon({
     path: {
-      16: '../images/tabbed-16.png',
-      19: '../images/tabbed-19.png',
-      32: '../images/tabbed-32.png',
-      38: '../images/tabbed-38.png',
-      64: '../images/tabbed-64.png',
+      16: '../images/external-tabless-16.png',
+      19: '../images/external-tabless-19.png',
+      32: '../images/external-tabless-32.png',
+      38: '../images/external-tabless-38.png',
+      64: '../images/external-tabless-64.png',
     }
   });
 };

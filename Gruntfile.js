@@ -179,73 +179,38 @@ module.exports = function (grunt) {
 
     'imagemagick-convert': {
       tabless16: icon({
-        input: '<%= config.app %>/images/tabless.svg',
-        output: '<%= config.dist %>/images/tabless-16.png',
+        input: '<%= config.app %>/images/external-tabless-1024.png',
+        output: '<%= config.dist %>/images/external-tabless-16.png',
         size: '16x16',
       }),
       tabless19: icon({
-        input: '<%= config.app %>/images/tabless.svg',
-        output: '<%= config.dist %>/images/tabless-19.png',
+        input: '<%= config.app %>/images/external-tabless-1024.png',
+        output: '<%= config.dist %>/images/external-tabless-19.png',
         size: '19x19',
       }),
       tabless32: icon({
-        input: '<%= config.app %>/images/tabless.svg',
-        output: '<%= config.dist %>/images/tabless-32.png',
+        input: '<%= config.app %>/images/external-tabless-1024.png',
+        output: '<%= config.dist %>/images/external-tabless-32.png',
         size: '32x32',
       }),
       tabless38: icon({
-        input: '<%= config.app %>/images/tabless.svg',
-        output: '<%= config.dist %>/images/tabless-38.png',
+        input: '<%= config.app %>/images/external-tabless-1024.png',
+        output: '<%= config.dist %>/images/external-tabless-38.png',
         size: '38x38',
       }),
       tabless48: icon({
-        input: '<%= config.app %>/images/tabless.svg',
-        output: '<%= config.dist %>/images/tabless-48.png',
+        input: '<%= config.app %>/images/external-tabless-1024.png',
+        output: '<%= config.dist %>/images/external-tabless-48.png',
         size: '48x48',
       }),
       tabless64: icon({
-        input: '<%= config.app %>/images/tabless.svg',
-        output: '<%= config.dist %>/images/tabless-64.png',
+        input: '<%= config.app %>/images/external-tabless-1024.png',
+        output: '<%= config.dist %>/images/external-tabless-64.png',
         size: '64x64',
       }),
       tabless128: icon({
-        input: '<%= config.app %>/images/tabless.svg',
-        output: '<%= config.dist %>/images/tabless-128.png',
-        size: '128x128',
-      }),
-      tabbed16: icon({
-        input: '<%= config.app %>/images/tabbed.svg',
-        output: '<%= config.dist %>/images/tabbed-16.png',
-        size: '16x16',
-      }),
-      tabbed19: icon({
-        input: '<%= config.app %>/images/tabbed.svg',
-        output: '<%= config.dist %>/images/tabbed-19.png',
-        size: '19x19',
-      }),
-      tabbed32: icon({
-        input: '<%= config.app %>/images/tabbed.svg',
-        output: '<%= config.dist %>/images/tabbed-32.png',
-        size: '32x32',
-      }),
-      tabbed38: icon({
-        input: '<%= config.app %>/images/tabbed.svg',
-        output: '<%= config.dist %>/images/tabbed-38.png',
-        size: '38x38',
-      }),
-      tabbed48: icon({
-        input: '<%= config.app %>/images/tabbed.svg',
-        output: '<%= config.dist %>/images/tabbed-48.png',
-        size: '48x48',
-      }),
-      tabbed64: icon({
-        input: '<%= config.app %>/images/tabbed.svg',
-        output: '<%= config.dist %>/images/tabbed-64.png',
-        size: '64x64',
-      }),
-      tabbed128: icon({
-        input: '<%= config.app %>/images/tabbed.svg',
-        output: '<%= config.dist %>/images/tabbed-128.png',
+        input: '<%= config.app %>/images/external-tabless-1024.png',
+        output: '<%= config.dist %>/images/external-tabless-128.png',
         size: '128x128',
       })
     },
@@ -334,15 +299,7 @@ module.exports = function (grunt) {
         'imagemagick-convert:tabless38',
         'imagemagick-convert:tabless48',
         'imagemagick-convert:tabless64',
-        'imagemagick-convert:tabless128',
-        'imagemagick-convert:tabbed16',
-        'imagemagick-convert:tabbed19',
-        'imagemagick-convert:tabbed32',
-        'imagemagick-convert:tabbed38',
-        'imagemagick-convert:tabbed48',
-        'imagemagick-convert:tabbed64',
-        'imagemagick-convert:tabbed128'
-      ]
+        'imagemagick-convert:tabless128'      ]
     },
 
     // Don't auto buildnumber, exclude debug files. smart builds that event pages
