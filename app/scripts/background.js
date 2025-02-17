@@ -78,7 +78,6 @@ var detachTabAsync = async function(tab) {
 };
 
 var startTabless = function() {
-  chrome.storage.local.set({tabless: true});
   chrome.tabs.onCreated.addListener(detachTab);
   chrome.action.setIcon({
     path: {
