@@ -9,7 +9,7 @@ It's a fork of [ei14/tab-less-togglable](https://github.com/ei14/tab-less-toggla
 
 ### Chrome Web Store
 
-Pending.
+The best way to install External Tab-less it from the [Chrome Web Store](https://chromewebstore.google.com/detail/external-tab-less/labdfffjhbbimbdgjlmbfkfkoefepcfd).
 
 ### Building from source
 
