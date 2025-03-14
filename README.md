@@ -72,6 +72,7 @@ a Chrome window on your current desktop!)  You then need to navigate yourself
 back to the desktop that you were working in, and bring the Chrome tab with the
 new URL with you.  This extension fixes that problem, the URL is always opened
 in a new window on the current desktop.
+([Background](https://apple.stackexchange.com/questions/9500/how-to-make-chrome-open-a-new-window-for-external-links))
 
 ### From other Chrome extensions
 URLs opened from other Chrome extensions are unfortunately considered to be
