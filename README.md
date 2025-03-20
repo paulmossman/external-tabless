@@ -5,13 +5,43 @@ window.
 
 It's a fork of [ei14/tab-less-togglable](https://github.com/ei14/tab-less-togglable).
 
-## Installation
-
-### Chrome Web Store
+## Installation: Chrome Web Store
 
 The best way to install External Tab-less it from the [Chrome Web Store](https://chromewebstore.google.com/detail/external-tab-less/labdfffjhbbimbdgjlmbfkfkoefepcfd).
 
-### Building from source
+## Why?
+
+Examples of opening a URL from outside Chrome:
+- From an IDE, such as [Visual Studio Code](https://code.visualstudio.com/).
+- From command line:
+    - Mac: `open https://github.com`
+    - Windows: `start https://github.com`
+- An application launching a web login, such as:
+    - [Bitwarden desktop](https://bitwarden.com/download/#downloads-desktop)
+    - MS Azure CLI's [`az login`](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli-interactively).
+
+When you aren't using Chrome but open a URL that takes you to Chrome, it's
+unlikely that URL is related to any of tabs you already have open in other
+Chrome windows.  So in general it's nice if the new URL opens in a fresh
+new Chrome window.
+
+This is the equivalent of Firefox's [`browser.link.open_external=2`](https://kb.mozillazine.org/Browser.link.open_external).
+
+**Mac multiple desktops (aka Spaces)**: When you're using multiple desktops on
+a Mac and open a URL from outside Chrome, if you don't already have a Chrome
+window on the current desktop then you're switched to some other desktop that
+does have a Chrome window.  (Sometimes it happens even when you do already have
+a Chrome window on your current desktop!)  You then need to navigate yourself
+back to the desktop that you were working in, and bring the Chrome tab with the
+new URL with you.  This extension fixes that problem, the URL is always opened
+in a new window on the current desktop.
+([Background](https://apple.stackexchange.com/questions/9500/how-to-make-chrome-open-a-new-window-for-external-links))
+
+### From other Chrome extensions
+URLs opened from other Chrome extensions are unfortunately considered to be
+from outside Chrome.
+
+## Development / Building from source
 
 1. [Install Node.js and
 npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
@@ -45,38 +75,6 @@ upper right corner
 There is nothing to configure, the extension is active upon installation.
 
 To disable it use [Chrome's Manage Extensions](chrome://extensions) to turn it "Off".
-
-## Why?
-
-Examples of opening a URL from outside Chrome:
-- From an IDE, such as [Visual Studio Code](https://code.visualstudio.com/).
-- From command line:
-    - Mac: `open https://github.com`
-    - Windows: `start https://github.com`
-- An application launching a web login, such as:
-    - [Bitwarden desktop](https://bitwarden.com/download/#downloads-desktop)
-    - MS Azure CLI's [`az login`](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli-interactively).
-
-When you aren't using Chrome but open a URL that takes you to Chrome, it's
-unlikely that URL is related to any of tabs you already have open in other
-Chrome windows.  So in general it's nice if the new URL opens in a fresh
-new Chrome window.
-
-This is the equivalent of Firefox's [`browser.link.open_external=2`](https://kb.mozillazine.org/Browser.link.open_external).
-
-**Mac multiple desktops (aka Spaces)**: When you're using multiple desktops on
-a Mac and open a URL from outside Chrome, if you don't already have a Chrome
-window on the current desktop then you're switched to some other desktop that
-does have a Chrome window.  (Sometimes it happens even when you do already have
-a Chrome window on your current desktop!)  You then need to navigate yourself
-back to the desktop that you were working in, and bring the Chrome tab with the
-new URL with you.  This extension fixes that problem, the URL is always opened
-in a new window on the current desktop.
-([Background](https://apple.stackexchange.com/questions/9500/how-to-make-chrome-open-a-new-window-for-external-links))
-
-### From other Chrome extensions
-URLs opened from other Chrome extensions are unfortunately considered to be
-from outside Chrome.
 
 ## Contributing
 
